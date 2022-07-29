@@ -157,6 +157,7 @@ export class I18nService {
     if (keys.length > 1 && !translations[key]) {
       const newKey = keys.slice(1, keys.length).join('.');
 
+      const t = translations && translations[firstKey];
       return translations && translations[firstKey]
         ? this.translateObject(
             newKey,
